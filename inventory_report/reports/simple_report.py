@@ -11,7 +11,7 @@ class SimpleReport:
         return (
             f"Data de fabricação mais antiga: {fabrication_date}\n"
             f"Data de validade mais próxima: {expiration_date}\n"
-            f"Empresa com mais produtos: {SimpleReport.gen_max_prod(products)}"
+            f"Empresa com mais produtos: {SimpleReport.gen_products(products)}"
         )
 
     def generate_dict(products):
@@ -23,7 +23,7 @@ class SimpleReport:
                 count_company[product["nome_da_empresa"]] = 1
         return count_company
 
-    def gen_max_products(products):
+    def gen_products(products):
         count_company = SimpleReport.create_dict(products)
         max_products = max(
             count_company, key=count_company.get

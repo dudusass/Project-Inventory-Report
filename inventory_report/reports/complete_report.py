@@ -5,7 +5,7 @@ class CompleteReport(SimpleReport):
     def generate(products):
         simple_report = SimpleReport.generate(products)
 
-        dict_report = SimpleReport.create_dict(products)
+        dict_report = SimpleReport.generate_dict(products)
 
         dict_string = CompleteReport.format_dict(dict_report)
 
