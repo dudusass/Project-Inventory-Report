@@ -24,7 +24,7 @@ class SimpleReport:
         return count_company
 
     def gen_products(products):
-        count_company = SimpleReport.create_dict(products)
+        count_company = SimpleReport.generate_dict(products)
         max_products = max(
             count_company, key=count_company.get
             )
